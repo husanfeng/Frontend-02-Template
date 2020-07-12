@@ -6,9 +6,11 @@
 
 undefined是一个变量，非关键词，一般不会给一个变量赋值为undefined，因为这样容易混淆或者无法判断这个变量是否已经赋值过。
 undefined与null的区别：如果一个变量为null，说明这个变量已经赋值为null了，而如果为undefined,说明没有给这个变量赋值过。
+
 2. String
 
 我们来看看字符串是否有最大长度。String 用于表示文本数据。String 有最大长度是 2^53 - 1，这在一般开发中都是够用的，但是有趣的是，这个所谓最大长度，并不完全是你理解中的字符数。因为 String 的意义并非“字符串”，而是字符串的 UTF16 编码，我们字符串的操作 charAt、charCodeAt、length 等方法针对的都是 UTF16 编码。所以，字符串的最大长度，实际上是受字符串的编码长度影响的。
+
 3. Symbol
 Symbol 可以具有字符串类型的描述，但是即使描述相同，Symbol 也不相等。
 ```
@@ -19,6 +21,7 @@ console.log(a === b) //false
 4. Boolean
 
 Boolean类型有两个值，true和false，表示逻辑上的真假，同样有两个关键字 true 和 false来表示。
+
 5. Number
 
 为什么在 JavaScript 中，0.1+0.2 不能 =0.3
