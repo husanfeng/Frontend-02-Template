@@ -1,14 +1,11 @@
 # JavaScript类型
 
 ### 一、值类型
-
-1. Undefined
-
+1.Undefined<br/>
 undefined是一个变量，非关键词，一般不会给一个变量赋值为undefined，因为这样容易混淆或者无法判断这个变量是否已经赋值过。
 undefined与null的区别：如果一个变量为null，说明这个变量已经赋值为null了，而如果为undefined,说明没有给这个变量赋值过。
 
-2. String
-
+2. String<br/>
 我们来看看字符串是否有最大长度。String 用于表示文本数据。String 有最大长度是 2^53 - 1，这在一般开发中都是够用的，但是有趣的是，这个所谓最大长度，并不完全是你理解中的字符数。因为 String 的意义并非“字符串”，而是字符串的 UTF16 编码，我们字符串的操作 charAt、charCodeAt、length 等方法针对的都是 UTF16 编码。所以，字符串的最大长度，实际上是受字符串的编码长度影响的。
 
 3. Symbol
