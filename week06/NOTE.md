@@ -1,82 +1,94 @@
-一、CSS总论
+# 第六周重学CSS
 
-1. CSS语法的研究 
+## 一、CSS总论
 
-CSS2.1的语法 
+### 1. CSS语法的研究 
 
-https://www.w3.org/TR/CSS21/grammar.html#q25.0
-https://www.w3.org/TR/css-syntax-3 
+- CSS2.1的语法 
 
-CSS总体结构 
+  - https://www.w3.org/TR/CSS21/grammar.html#q25.0
+  - https://www.w3.org/TR/css-syntax-3 
 
-![]('./1.jpg')
+- CSS总体结构 
 
-• at-rules
-• @charset
-• @import
-• @media
-• @page
-• @counter-style
-• @keyframes
-• @fontface
-• @support
-• @namespace
-• rules
+   ![](1.jpg)
 
-2. CSS @规则的研究 
+   - at-rules
+      - @charset
+      - @import
+      - @media
+      - @page
+      - @counter-style
+      - @keyframes
+      - @fontface
+      - @support
+      - @namespace
+   - rules
 
-At-rules  
+### 2. CSS @规则的研究 
 
-• @charset ： https://www.w3.org/TR/css-syntax-3/  
-• @import ：https://www.w3.org/TR/css-cascade-4/  
-• @media ：https://www.w3.org/TR/css3-conditional/  
-• @page ： https://www.w3.org/TR/css-page-3/  
-• @counter-style ：https://www.w3.org/TR/css-counter-styles-3  
-• @keyframes ：https://www.w3.org/TR/css-animations-1/
-• @fontface ：https://www.w3.org/TR/css-fonts-3/  
-• @supports ：https://www.w3.org/TR/css3-conditional/  
-• @namespace ：https://www.w3.org/TR/css-namespaces-3/ 
-3. CSS规则的结构 
+- At-rules  
 
-• 选择器
+   - @charset ： https://www.w3.org/TR/css-syntax-3/  
+   - @import ：https://www.w3.org/TR/css-cascade-4/  
+   - @media ：https://www.w3.org/TR/css3-conditional/  
+   - @page ： https://www.w3.org/TR/css-page-3/  
+   - @counter-style ：https://www.w3.org/TR/css-counter-styles-3  
+   - @keyframes ：https://www.w3.org/TR/css-animations-1/
+   - @fontface ：https://www.w3.org/TR/css-fonts-3/  
+   - @supports ：https://www.w3.org/TR/css3-conditional/  
+   - @namespace ：https://www.w3.org/TR/css-namespaces-3/ 
 
-• 声明
+### 3. CSS规则的结构 
 
-• Key
+- 选择器
 
-• Value
+- 声明
 
-• Selector  
+   - Key
 
-• https://www.w3.org/TR/selectors-3/ 
+   - Value
 
-• https://www.w3.org/TR/selectors-4/  
+- Selector  
 
-•  Key  
+   - https://www.w3.org/TR/selectors-3/ 
 
-• Properties  
+   - https://www.w3.org/TR/selectors-4/  
 
-• Variables: https://www.w3.org/TR/css-variables/  
+-  Key  
 
-• Value  
+   - Properties  
 
-• https://www.w3.org/TR/css-values-4/
+   - Variables: https://www.w3.org/TR/css-variables/  
 
-二、选择器
+- Value  
 
-   简单选择器  
-• *  
-• div svg|a  
-• .cls  
-• #id  
-•  [attr=value]  
-•  :hover  
-• ::before
+   - https://www.w3.org/TR/css-values-4/
 
-练习：
+## 二、选择器
 
-请写出下面选择器的优先级： 
+- 简单选择器  
+   - *  
+   - div svg|a  
+   - .cls  
+   - #id  
+   -  [attr=value]  
+   -  :hover  
+   - ::before
+- 复合选择器 
+- <简单选择器><简单选择器><简单选择器> 
+- * 或者 div 必须写在最前面 
+- 复杂选择器 
+- <复合选择器><sp><复合选择器> 
+- <复合选择器>">"<复合选择器> 
+- <复合选择器>"~"<复合选择器> 
+- <复合选择器>"+"<复合选择器> 
+- <复合选择器>"||"<复合选择器>
 
+### 练习：
+
+>请写出下面选择器的优先级： 
+```
 div#a.b .c[id=x] 0 1 3 1 #a:not(#b) 0 2 0 0 *.a 0 0 1 0 div.a 0 0 1 1
 A：div#a.b .c[id=x] 0 1 3 1 
 B：#a:not(#b) 0 2 0 0 
@@ -93,57 +105,35 @@ C=100
 D = 101
 
 所以优先级 B>A>D>C
+```
+## 三、伪类
 
-伪类
+- 链接/行为
+   - :any-link  
+   - :link :visited  
+   - :hover  
+   - :active  
+   - :focus  
+   - :target 
 
-链接/行为
+- 树结构
+   - :empty  
+   - :nth-child()  
+   - :nth-last-child()  
+   - :first-child :last-child :only-child 
 
-• :any-link  
-• :link :visited  
-• :hover  
-• :active  
-• :focus  
-• :target 
+- 逻辑型  
+   - :not伪类  
+   - :where :has 
 
-树结构
+## 四、伪元素  
 
-• :empty  
-• :nth-child()  
-• :nth-last-child()  
-• :first-child :last-child :only-child 
+- ::before  
+- ::after  
+- ::first-line  
+- ::first-letter 
 
-逻辑型  
 
-• :not伪类  
-• :where :has 
+> 为什么first-letter可以设置float之类的，而first-line不行呢？
 
-伪元素  
-
-• ::before  
-• ::after  
-• ::first-line  
-• ::first-letter 
-• :empty
-• :nth-child()
-• :nth-last-child()
-• :first-child :last-child :only-child
-
-简单选择器
-
-• * 
-• div svg|a
-• .cls
-• #id
-• [attr=value]
-• :hover
-• ::before
-
-简单选择器
-
-• * 
-• div svg|a
-• .cls
-• #id
-• [attr=value]
-• :hover
-• ::before
+ first-letter 和 first-line 的计算时机不同，first-letter 匹配到的文本在 css compute 之前就可以确定，而 first-line 匹配到的文本需在渲染后才能确定。如果给 first-line 添加了可以改变盒模型、改变排版的属性，则应用了这些属性后，原本 first-line 匹配的文本就不一定完全匹配了，需要重新计算，这样就陷入了死循环。
