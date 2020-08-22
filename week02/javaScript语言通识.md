@@ -1,4 +1,5 @@
-![](https://6873-hsf-blog-product-jqt54-1256640731.tcb.qcloud.la/article/14_article/320-375x150.jpg?sign=637e176bb754355acfaa1250734742e1&t=1594550955)
+# 第2周 重学JavaScript
+
 ### 语言按语法分类
 - 非形式语言
    - 中文，英文
