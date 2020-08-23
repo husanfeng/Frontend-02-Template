@@ -1,4 +1,4 @@
-# 第8周重学HTML 浏览器API
+# 第8周重学HTML
 
 ## 一、HTML语言的追根溯源
 >HTML 称为“标记语言（mark up language）”，它是纯文本的一种升级，“标记”一词的概念来自：编辑审稿时使用不同颜色笔所做的“标记”。
@@ -97,3 +97,11 @@ code定义计算机代码文本。<br>
 
 ## 三、HTML 语法
 
+### 合法元素
+
+- Element: &lt;tagname>...&lt;/tagname> 
+- Text: text
+- Comment: &lt;!-- comments --> 
+- DocumentType: <!Doctype html>
+- ProcessingInstruction: <?a 1?>
+- CDATA:&lt;![CDATA[ ]]>
