@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>async编程练习</title>
+</head>
+
+<body>
+    <script>
+        // 一个路口的红绿灯，会按照绿灯亮10秒，黄灯亮2秒，红灯亮5秒的顺序无限循环，请编写js代码来控制这个红绿灯
+        // 绿灯
+        function greenLightFn() {
+            console.log('绿灯亮10秒')
+            setTimeout(() => {
+                yellowLightFn()
+            }, 10000)
+        }
+        // 黄灯
+        function yellowLightFn() {
+            console.log('黄灯亮2秒')
+            setTimeout(() => {
+                redLightFn()
+            }, 2000)
+        }
+        // 红灯
+        function redLightFn() {
+            console.log('红灯亮5秒')
+            setTimeout(() => {
+                greenLightFn()
+            }, 5000)
+        }
+        greenLightFn();
+    </script>
+</body>
+
+</html>
